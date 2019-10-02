@@ -1,0 +1,44 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+    <section class="row">
+        Onom's Movies
+        <img style="height:3rem;width:3rem;" src="https://thumbs.dreamstime.com/z/films-logo-5371391.jpg" alt="Alternate Text" />
+        
+       
+
+    </section>
+    <section class="row">
+        <h1>Latest Movies</h1>
+        <aside class="col-lg-4 col-md-4 col-sm-12">
+            <img src="https://image.chilimovie.com/public/300px/20190919/p0aT7AS2Zb7rbTfEKvJR3faFfwC.jpg" alt="Alternate Text" />
+        </aside>
+        <aside class="col-lg-4 col-md-4 col-sm-12">
+            <img src="https://image.chilimovie.com/public/300px/20190731/ahETZlOXCPIUVhp1HBW4X7KefiS.jpg" alt="Alternate Text" />
+        </aside>
+        <aside class="col-lg-4 col-md-4 col-sm-12">
+            <img src="https://image.chilimovie.com/public/300px/20190604/dzBtMocZuJbjLOXvrl4zGYigDzh.jpg" alt="Alternate Text" />
+        </aside>
+        <aside class="col-lg-4 col-md-4 col-sm-12">
+            <img src="https://image.chilimovie.com/public/300px/20170808/gwPSoYUHAKmdyVywgLpKKA4BjRr.jpg" alt="Alternate Text" />
+        </aside>
+        <aside class="col-lg-4 col-md-4 col-sm-12">
+            <img src="https://image.tmdb.org/t/p/w780/840rbblaLc4SVxm8gF3DNdJ0YAE.jpg" alt="Alternate Text" />
+        </aside>
+
+        <section class="row text-center">
+            <h1>@Model.MainTitle</h1>
+
+            @foreach (string name in Model.MovieNames)
+            {
+                <aside class="col-lg-4 col-md-4 col-sm-12">
+                    <p>@name</p>
+                    
+                </aside>
+            }
+            </section>
+    </section>
+    
